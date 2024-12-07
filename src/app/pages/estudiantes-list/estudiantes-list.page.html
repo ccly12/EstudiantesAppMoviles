@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Estudiantes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let estudiante of estudiantes">
+      <ion-avatar slot="start">
+        <img [src]="estudiante.fotoPerfil" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ estudiante.primerNombre }} {{ estudiante.primerApellido }}</h2>
+        <p>{{ estudiante.carrera }}</p>
+      </ion-label>
+      <ion-button [routerLink]="['/estudiantes', estudiante.id]">Ver Cursos</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

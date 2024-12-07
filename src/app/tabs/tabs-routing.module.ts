@@ -20,6 +20,18 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'estudiantes-list',
+        loadChildren: () => import('../pages/estudiantes-list/estudiantes-list.module').then(m => m.EstudiantesListPageModule)
+      },
+      {
+        path: 'estudiantes/:id',
+        loadChildren: () => import('../pages/estudiante-cursos/estudiante-cursos.module').then(m => m.EstudianteCursosPageModule)
+      },
+      {
+        path: 'solicitud',
+        loadChildren: () => import('../pages/solicitud/solicitud.module').then(m => m.SolicitudPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'

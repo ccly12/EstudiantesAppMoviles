@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cursos de {{ estudiante?.primerNombre }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/estudiantes-list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let curso of cursos">
+      <ion-label>
+        <h2>{{ curso.nombre }}</h2>
+        <p>Docente: {{ curso.docente }}</p>
+        <p>Código: {{ curso.codigo }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
